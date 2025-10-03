@@ -23,16 +23,16 @@ To create a central hub where students can access events, resources, and informa
 
 ## 📂 Folder Structure  
 GDSC-Club-Website/
-│
-├── index.html
-├── style.css
-├── script.js
-├── assets/
-│ ├── gdsc/
-│ │ └── [images...]
-│ └── domain-logos/
-│ └── [logos...]
-└── README.md
+│  
+├── index.html  
+├── style.css  
+├── script.js  
+├── assets/  
+│ ├── gdsc/  
+│ │ └── [images...]  
+│ └── domain-logos/  
+│ └── [logos...]  
+└── README.md  
 
 ## 🚀 How to Use  
 1. Clone or download this repository.  
