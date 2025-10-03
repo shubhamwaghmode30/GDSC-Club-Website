@@ -1,9 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>GDSC Club Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GDSC VIT</title>
+    <link rel="icon" type="image/x-icon" href="assets/gdsc/gdsc-logo.png">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">    
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- My JS -->
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <h1>Hello GDSC!</h1>
+    <div id="youtube-background"></div>
+    <div class="overlay"></div>
+    
+    <!-- Header -->
+    <header class="text-center p-3 bg-dark text-white">
+        <h1>GDSC VIT</h1>
+        <h2>Google Developer Students Club VIT</h2>
+        <img src="assets/gdsc/gdsc-logo.png" alt="GDSC VIT LOGO" class="img-fluid" width="100">
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#domain">Domains</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="container text-center mt-4">
+        <h1>Welcome to GDSC VIT</h1><br>
+        <img src="assets/gdsc/gdsc-club.png" alt="GDSC Club Image" class="img-fluid">
+    </section>
+    
+    <!-- About -->
+    <section id="about" class="container text-center mt-4">
+        <h2>What Is GDSC?</h2>
+        <p>Helping students bridge the gap between Theory and Practice.</p>
+        <p><strong>Google Developer Student Clubs</strong>are university-based community groups for students interested in Google Dev technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome. By joining a Google DSC, students grow their knowledge in a peer-to-peer learning environment and build solutions for local businesses and their community.</p>
+        <img src="https://dscvit.com/projects/default.png" alt="GDSC VIT" class="img-fluid w-75">
+    </section>
+
+    <!-- Domain -->
+    <section id="domain" class="container">
+        <h2>Domains</h2><br>
+        <p>Passionate students and faculty staff driving the success of the program</p>
+        <div class="grid-container">
+            <div class="card">
+                <img src="assets/domain-logos/management.png" alt="Management" width = 50% class="card-img">
+                <p><strong>Management</strong></p>
+                <p>4 Members | 1 Lead</p>
+            </div>  
+            <div class="card">
+                <img src="assets/domain-logos/app.png" alt="App Development" width = 50% class="card-img">
+                <p><strong>App Development</strong></p>
+                <p>3 Members | 1 Lead</p>
+            </div>
+            <div class="card">
+                <img src="assets/domain-logos/tech.png" alt="Tech" width = 50% class="card-img">
+                <p><strong>Tech</strong></p>
+                <p>4 Members | 1 Lead</p>
+            </div>
+            <div class="card">
+                <img src="assets/domain-logos/design.png" alt="Design" width = 50% class="card-img">
+                <p><strong>Design</strong></p>
+                <p>4 Members | 1 Lead</p>
+            </div>
+            <div class="card">
+                <img src="assets/domain-logos/outreach.png" alt="Outreach" width = 50% class="card-img">
+                <p><strong>Outreach</strong></p>
+                <p>4 Members | 1 Lead</p>
+            </div>
+            <div class="card">
+                <img src="assets/domain-logos/cloud.png" alt="Cloud" width = 50% class="card-img">
+                <p><strong>Cloud</strong></p>
+                <p>2 Members | 1 Lead</p>
+            </div>
+            <div class="card">
+                <img src="assets/domain-logos/webdev.png" alt="Web Development" width = 50% class="card-img">
+                <p><strong>Web Development</strong></p>
+                <p>2 Members</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Update Committee -->
+    <section id="manage-committee" class="container mt-5">
+        <h2 class="text-center text-white bg-dark p-2 rounded">Update Club Committee</h2>
+        <div class="card shadow-lg p-4 bg-light">
+            <div class="row">
+                <div class="col-md-5 mb-3">
+                    <input type="text" id="committee-name" class="form-control" placeholder="Member Name" required>
+                </div>
+                <div class="col-md-5 mb-3">
+                    <input type="text" id="committee-role" class="form-control" placeholder="Member Role" required>
+                </div>
+                <div class="col-md-2 text-center">
+                    <button class="btn btn-success w-100" onclick="addCommitteeMember()">Update</button>
+                </div>
+            </div>
+            <ul id="committee-list" class="list-group mt-3"></ul>
+        </div>
+    </section>
+
+    <section id="gallery" class="container">
+        <h2>Gallery</h2><br>
+        <div class="grid-container">
+            <img src="https://gdscvitpune.netlify.app/events/23/displayImage.png" class="gallery-img" alt="Event 1">
+            <img src="https://gdscvitpune.netlify.app/events/5/displayImage.png" class="gallery-img" alt="Event 2">   
+        </div>
+    </section>
+
+    <!-- Submit Success Story -->
+    <section id="submit-story" class="container text-center mt-4">
+        <h2>Submit Success Story</h2><br>
+        <div class="form-container">
+            <input type="text" id="story-title" placeholder="Story Title" class="form-control w-85 mx-auto text-left mb-2" required>
+            <textarea id="story-description" placeholder="Story Description" class="form-control w-85 mx-auto text-left mb-2" required></textarea>
+            <label><br>Upload Image</label>
+            <input type="file" id="story-image" class="form-control w-80 mx-auto mb-2" accept="image/*">
+            <label><br>Upload Video<br></label>
+            <input type="file" id="story-video" class="form-control w-80 mx-auto mb-2" accept="video/*">
+           <br> <button class="btn btn-success mt-2" onclick="submitStory()">Submit Story</button>
+        </div>
+    </section>
+
+    <!-- View Stories -->
+    <section id="story-display" class="container text-center mt-4">
+        <h2>Shared Success Stories</h2>
+        <div id="stories-container"></div>
+    </section>
+    
+    <button class="btn btn-primary mt-2" onclick="viewStoryPage()">View All Stories in New Tab</button>
+
+    <!-- Email Success Story -->
+    <section id="email-story" class="container text-center mt-4">
+        <h2>Email Success Story</h2>
+        <input type="email" id="email-address" placeholder="Enter Email" class="form-control w-50 mx-auto text-center mb-2">
+        <button class="btn btn-info mt-2" onclick="addEmail()">Add Email</button>
+        <label class="mt-2"><input type="checkbox" id="send-all"> Send to all VIT students</label>
+        <button class="btn btn-warning mt-2" onclick="sendStory()">Send Story</button>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="container mt-5">
+        <h2 class="text-center">FAQs</h2>
+        <div class="accordion mt-3" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        1. How often do events take place?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Events are held frequently by GDSC VIT, including webinars, seminars, and inter-college coding competitions.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        2. How to become a member of GDSC?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Registration opens yearly. Those with skills and enthusiasm can join during the new session.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        3. What domains does GDSC VIT have?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Web Development, App Development, Tech (Python, ML), Cloud, Outreach, Management, and Design.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        4. Who is the Lead of GDSC for session 2024-25?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Karan Harshey is the Lead for the Academic Year 2024-2025.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- Contact -->
+    <section id="contact" class="container text-center mt-4">
+        <h2>Contact Us</h2>
+        <form id="contact-form" class="mt-3">
+            <input type="text" id="name" name="name" class="form-control mb-2" placeholder="Your Name" required><br>
+            <input type="email" id="email" name="email" class="form-control mb-2" placeholder="Your Email" required><br>
+            <textarea id="message" name="message" class="form-control mb-2" placeholder="Message" required></textarea><br>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </section>
+
+    <footer class="text-center bg-dark text-white p-3 mt-4">
+        <p>&copy; 2024-25 GDSC VIT</p>
+    </footer>
+
 </body>
 </html>
