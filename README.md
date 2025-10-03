@@ -22,7 +22,7 @@ To create a central hub where students can access events, resources, and informa
 - jQuery  
 
 ## 📂 Folder Structure  
-GDSC-Club-Website/
+GDSC-Club-Website/  
 │  
 ├── index.html  
 ├── style.css  
